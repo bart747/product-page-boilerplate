@@ -86,10 +86,6 @@ section {
   @include col(50%);
 }
 
-.img-row .img-secondary:last-of-type {
-
-}
-
 .detail {
   @media all and (min-width: $screen-sml) {
     @include row();
