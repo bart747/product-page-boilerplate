@@ -21,7 +21,5 @@
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
-    "flexboxgrid": "^6.3.1",
-    "normalize.css": "^5.0.0"
   }
 }
