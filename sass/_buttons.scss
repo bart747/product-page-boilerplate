@@ -1,0 +1,59 @@
+button,
+.btn {
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  background: $orange;
+  border: solid $orange-deep;
+  border-width: 2px 2px 3px;
+  border-bottom-color: $orange-deep;
+  border-radius: $radius;
+  font-size: 1em;
+  outline: none; 
+  padding: 0.5em 1em;
+  text-align: center;
+  margin: 0.5em 0;
+  max-width: 12em;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active { 
+    background: lighten($orange-deep, 10%);
+  }
+  &:active {
+    background: $orange-deep;
+    border-color: $orange-deep;
+    
+  }
+  &:focus {
+    outline: none;
+    border-color: darken($orange-deep, 10%);
+  }
+}
+
+.btn-buy {
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.btn-secondary {
+  font-size: 0.75em;
+  padding: 0.25em 0.5em;
+  background: $blue;
+  border: solid $blue;
+  border-bottom-color: $blue-dark;
+
+  &:hover,
+  &:active { 
+    background: lighten($blue-dark, 10%);
+  }
+  &:active {
+    background: $blue-dark;
+    border-color: $blue-dark;
+    
+  }
+  &:focus {
+    outline: none;
+    border-color: $blue-dark;
+  }
+}
