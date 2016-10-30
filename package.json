@@ -13,6 +13,7 @@
     "eslint": "^3.8.1",
     "eslint-config-google": "^0.7.0",
     "eslint-loader": "^1.6.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.10.1",
     "postcss-loader": "^1.0.0",
     "sass-loader": "^4.0.2",
@@ -20,6 +21,6 @@
     "webpack": "^1.13.3"
   },
   "dependencies": {
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^1.0.1"
   }
 }
