@@ -11,19 +11,17 @@ module.exports = {
       {
         test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/
       },
-      // Extract css files
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?importLoaders=1',
-          'postcss-loader')
-      },
-      // Optionally extract less files
-      // or any other compile-to-css language
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+        loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
+      },    
+      {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1'
+        ]
       }
-      // You could also use other loaders the same way. I. e. the autoprefixer-loader
     ]
   },
   eslint: {
@@ -31,12 +29,10 @@ module.exports = {
   },
   postcss: function () {
     return [
-      require('postcss-smart-import')({ /* ...options */ }),
-      require('precss')({ /* ...options */ }),
-      require('autoprefixer')({ /* ...options */ })
+      require('autoprefixer')({ browsers: ['last 2 versions'] })
     ];
   },
   plugins: [
-    new ExtractTextPlugin("../css/bundle.css")
+    new ExtractTextPlugin('../css/bundle.css')
   ]
 };
